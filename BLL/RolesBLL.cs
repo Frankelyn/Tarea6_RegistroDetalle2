@@ -25,10 +25,17 @@ namespace RegistroDetalle2.BLL
         {
             bool paso = false;
             Contexto contexto = new Contexto();
-
+            Permisos permiso = new();
             try
             {
                 contexto.Roles.Add(rol);
+                foreach(var Item in rol.RolesDetalle)
+                {
+                    permiso = contexto.Permisos.Find(Item.PermisoId);
+                    permiso.VecesAsignado += 1;
+                }
+
+
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)

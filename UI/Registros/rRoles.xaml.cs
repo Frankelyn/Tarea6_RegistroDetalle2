@@ -19,8 +19,11 @@ namespace RegistroDetalle2.UI.Registros
     /// <summary>
     /// Interaction logic for rRoles.xaml
     /// </summary>
+    /// 
+   
     public partial class rRoles : Window
     {
+      
         private Roles Rol = new Roles();
         public rRoles()
         {
@@ -31,7 +34,6 @@ namespace RegistroDetalle2.UI.Registros
             PermisoComboBox.SelectedValuePath = "PermisoId";
             PermisoComboBox.DisplayMemberPath = "Descripcion";
 
-            
         }
 
         Permisos permisos = new();
@@ -65,19 +67,21 @@ namespace RegistroDetalle2.UI.Registros
             }
         }
 
-        int aumento = 0;
+        //int aumento = 0;
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            
 
             Rol.RolesDetalle.Add(new RolesDetalle
             {
                 RolId = Rol.RolId,
                 PermisoId = (int)PermisoComboBox.SelectedValue,
-                esAsignado = (bool)esActivoCheckBox.IsChecked
+                esAsignado = (bool)esAsignadoCheckBox.IsChecked,
+                DescripcionPermiso = PermisosBLL.GetDescripcion((int)PermisoComboBox.SelectedValue),
+                VecesAsignado = PermisosBLL.GetVecesAsignado((int)PermisoComboBox.SelectedValue)
             });
 
-            permisos.VecesAsignado = aumento++;
+            
 
             Cargar();
         }
@@ -130,6 +134,8 @@ namespace RegistroDetalle2.UI.Registros
             }
             else
                 MessageBox.Show("Fallo al guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+
+           
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

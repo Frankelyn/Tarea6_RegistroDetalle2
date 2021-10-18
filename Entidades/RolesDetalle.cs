@@ -17,5 +17,9 @@ namespace RegistroDetalle2.Entidades
         public int PermisoId { get; set; }
 
         public bool esAsignado { get; set; }
+
+        public string DescripcionPermiso { get; set; }
+
+        public int VecesAsignado { get; set; }
     }
 }

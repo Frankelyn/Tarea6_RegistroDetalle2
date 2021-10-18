@@ -9,7 +9,7 @@ using RegistroDetalle2.DAL;
 namespace RegistroDetalle2.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211016022519_Migracion_Inicial")]
+    [Migration("20211018012152_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,21 +43,21 @@ namespace RegistroDetalle2.Migrations
                             PermisoId = 1,
                             Descripcion = "Permiso para ser administrador del sistema",
                             Nombre = "Administrador",
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 2,
                             Descripcion = "Permiso para entrar como usuario al sistema",
                             Nombre = "Usuario",
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         },
                         new
                         {
                             PermisoId = 3,
                             Descripcion = "Permiso para entrar como invitado del sistema",
                             Nombre = "Invitado",
-                            VecesAsignado = 1
+                            VecesAsignado = 0
                         });
                 });
 
@@ -87,10 +87,16 @@ namespace RegistroDetalle2.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("DescripcionPermiso")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("PermisoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("RolId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("VecesAsignado")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("esAsignado")

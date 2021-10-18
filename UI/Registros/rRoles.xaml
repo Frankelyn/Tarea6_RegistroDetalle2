@@ -32,11 +32,9 @@
                 <StackPanel Orientation="Vertical">
                     <GroupBox Header="Roles Detalle" Margin="0,0,0,0">
                         <StackPanel Margin="10">
+                            <CheckBox  x:Name="esAsignadoCheckBox" Content="Es Asignado" IsChecked="{Binding esAsignado}" Margin="340,1,0,0"/>
                             <Label Content="Permiso"/>
                             <ComboBox x:Name="PermisoComboBox" SelectedValue="{Binding PermisoId}" />
-
-                            <Label Content="Veces asignado"/>
-                            <TextBox x:Name="VecesAsignadoTextbox" Text="{Binding VecesAsignado}" IsEnabled="False"/>
 
                             <StackPanel Orientation="Horizontal">
                                 <Button x:Name="AgregarFilaButton" Margin="10" Click="AgregarFilaButton_Click"  Width="123">
@@ -54,7 +52,9 @@
                             <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding RolesDetalle}" Height="80" AutoGenerateColumns="False" >
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="PermisoId" Binding="{Binding PermisoId}"/>
+                                    <DataGridTextColumn Header="Descripcion" Binding="{Binding DescripcionPermiso}"/>
                                     <DataGridTextColumn Header="esAsignado" Binding="{Binding esAsignado}"/>
+                                    <DataGridTextColumn Header="Veces Asignado" Binding="{Binding VecesAsignado}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
 

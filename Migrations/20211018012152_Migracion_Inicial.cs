@@ -45,7 +45,9 @@ namespace RegistroDetalle2.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     RolId = table.Column<int>(type: "INTEGER", nullable: false),
                     PermisoId = table.Column<int>(type: "INTEGER", nullable: false),
-                    esAsignado = table.Column<bool>(type: "INTEGER", nullable: false)
+                    esAsignado = table.Column<bool>(type: "INTEGER", nullable: false),
+                    DescripcionPermiso = table.Column<string>(type: "TEXT", nullable: true),
+                    VecesAsignado = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,17 +63,17 @@ namespace RegistroDetalle2.Migrations
             migrationBuilder.InsertData(
                 table: "Permisos",
                 columns: new[] { "PermisoId", "Descripcion", "Nombre", "VecesAsignado" },
-                values: new object[] { 1, "Permiso para ser administrador del sistema", "Administrador", 1 });
+                values: new object[] { 1, "Permiso para ser administrador del sistema", "Administrador", 0 });
 
             migrationBuilder.InsertData(
                 table: "Permisos",
                 columns: new[] { "PermisoId", "Descripcion", "Nombre", "VecesAsignado" },
-                values: new object[] { 2, "Permiso para entrar como usuario al sistema", "Usuario", 1 });
+                values: new object[] { 2, "Permiso para entrar como usuario al sistema", "Usuario", 0 });
 
             migrationBuilder.InsertData(
                 table: "Permisos",
                 columns: new[] { "PermisoId", "Descripcion", "Nombre", "VecesAsignado" },
-                values: new object[] { 3, "Permiso para entrar como invitado del sistema", "Invitado", 1 });
+                values: new object[] { 3, "Permiso para entrar como invitado del sistema", "Invitado", 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_RolesDetalle_RolId",

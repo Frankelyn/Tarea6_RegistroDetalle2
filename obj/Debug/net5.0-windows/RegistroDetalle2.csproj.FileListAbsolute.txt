@@ -61,9 +61,9 @@ C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\bin\Debug\net5.0-windows\Resources\new-icon.png
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\bin\Debug\net5.0-windows\Resources\save-icon (1).png
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\bin\Debug\net5.0-windows\Resources\search-icon.png
-C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\bin\Debug\net5.0-windows\DATA\RolesDetalle2.db
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\obj\Debug\net5.0-windows\UI\Registros\rRoles.g.cs
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\obj\Debug\net5.0-windows\RegistroDetalle2_Content.g.cs
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\obj\Debug\net5.0-windows\UI\Registros\rRoles.baml
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\obj\Debug\net5.0-windows\RegistroDetalle2.Properties.Resources.resources
 C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\obj\Debug\net5.0-windows\RegistroDetalle2.csproj.GenerateResource.cache
+C:\Users\frank\OneDrive\Escritorio\UCNE_3-2021\Laboratorio_Programacion_Aplicada_1\RegistroDetalle2\RegistroDetalle2\bin\Debug\net5.0-windows\DATA\RolesDetalle2.db

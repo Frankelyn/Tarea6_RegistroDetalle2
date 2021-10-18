@@ -17,7 +17,7 @@ namespace RegistroDetalle2.Entidades
 
         public string Descripcion { get; set; }
 
-        public int VecesAsignado { get; set; } = 0;
+        public int VecesAsignado { get; set; } 
 
         
     }

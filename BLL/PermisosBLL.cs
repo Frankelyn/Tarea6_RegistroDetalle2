@@ -76,5 +76,35 @@ namespace RegistroDetalle2.BLL
 
             return lista;
         }
+
+        public static string GetDescripcion(int permisoId)
+        {
+            List<Permisos> lista = new();
+
+            lista = PermisosBLL.GetPermisos();
+            string descri = "";
+            foreach(var item in lista)
+            {
+                if (item.PermisoId == permisoId)
+                    descri = item.Descripcion;
+            }
+
+            return descri;
+        }
+
+        public static int GetVecesAsignado(int permisoId)
+        {
+            List<Permisos> lista = new();
+
+            lista = PermisosBLL.GetPermisos();
+            int valor = 0;
+            foreach (var item in lista)
+            {
+                if (item.PermisoId == permisoId)
+                    valor = item.VecesAsignado;
+            }
+
+            return valor;
+        }
     }
 }
